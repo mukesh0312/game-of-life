@@ -13,9 +13,10 @@ pipeline {
 			}
 		}
 		
-		stage ('unittest and arcive .jar file') {
+		stage ('unittest and arcive ') {
 			steps {
 				junit '**/surefire-reports/*.xml'
+				archiveArtifacts artifacts: '**/*.war', followSymlinks: false
 			}
 		}
 	}
