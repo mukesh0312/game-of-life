@@ -15,7 +15,7 @@ pipeline {
 		
 		stage ('unittest and arcive .jar file') {
 			steps {
-				junit '**/surefire-reports/*.xml
+				junit '**/surefire-reports/*.xml'
 			}
 		}
 	}
